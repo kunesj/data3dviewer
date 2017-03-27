@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=Data3DViewer
+Name[en_US]=Data3DViewer
+GenericName=Data3DViewer
+Exec=data3dviewer %u
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;Viewer;
