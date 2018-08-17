@@ -35,7 +35,8 @@ def main():
     logger.info("Loading 3d data from: %s" % os.path.abspath(args.path))
     datap = io3d.read(os.path.abspath(args.path), dataplus_format=True)
     data3d = datap["data3d"]
-    
+    logger.info("voxelsize: %s" % str(datap["voxelsize_mm"]))
+
     # temporary fix for io3d <-512;511> value range bug
     # this is caused by hardcoded slope 0.5 in dcmreader
     if np.min(data3d) >= -512: data3d = data3d * 2
